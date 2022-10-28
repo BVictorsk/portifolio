@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+:root {
+  --font-base: "DM Sans", sans-serif;
+
+  --primary-color: #0c0b0b;
+  --secondary-color: #3472b5;
+  --primaryLight-color: #0f0f0f;
+  --secondaryLight-color: #a0d1ff;
+  --fifth-color: #2a2a2a;
+  --sixth-color: #35578f;
+  --white-color: #ffffff;
+  --black-color: #000;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 2px;             
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--primary-color);        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--fifth-color);   
+  border-radius: 5px;     
+
+}
