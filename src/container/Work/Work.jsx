@@ -3,7 +3,9 @@ import { motion } from 'framer-motion'
 import { urlFor, client } from '../../client'
 import { AppWrap } from '../../wrapper'
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
+import { useTranslation } from "react-i18next";
 import './Work.scss'
+import "../../i18n"
 
 const Work = () => {
   const [works, setWorks] = useState([]);
@@ -27,7 +29,7 @@ const Work = () => {
     setTimeout(() => {
       setAnimateCard([{ y: 0, opacity: 1 }]);
 
-      if (item === 'All') {
+      if (item === 'All' ) {
         setFilterWork(works);
       } else {
         setFilterWork(works.filter((work) => work.tags.includes(item)));
@@ -35,18 +37,20 @@ const Work = () => {
     }, 500);
   };
 
+  const { t } = useTranslation();
+
   return (
     <>
-      <h2 className="head-text-w">My Creative <span>Portfolio</span> Section</h2>
+      <h2 className="head-text-w"> {t('MyCreative')} <span>{t('Portfolio')}</span> {t('Section')}</h2>
 
       <div className="app__work-filter">
-        {[  'All', 'React.js','Typescript'].map((item, index) => (
+        {[ 'All', 'React.js','Typescript'].map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
             className={`app__work-filter-item app__flex p-text ${activeFilter === item ? 'item-active' : ''}`}
           >
-            {item}
+            {t(item)}
           </div>
         ))}
       </div>
@@ -93,11 +97,11 @@ const Work = () => {
             </div>
 
             <div className="app__work-content app__flex">
-              <h4 className="bold-text">{work.title}</h4>
-              <p className="p-text" style={{ marginTop: 10 }}>{work.description}</p>
+              <h4 className="bold-text">{t(work.title)}</h4>
+              <p className="p-text-w" style={{ marginTop: 10 }}>{t(work.description)}</p>
 
               <div className="app__work-tag app__flex">
-                <p className="p-text">{work.tags[0]}</p>
+                <p className="p-text-w">{t(work.tags[0])}</p>
               </div>
             </div>
           </div>

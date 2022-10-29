@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import ReactTooltip from 'react-tooltip';
-
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
+import { useTranslation } from "react-i18next";
+import ReactTooltip from 'react-tooltip';
+import "../../i18n"
 import './Skills.scss';
 
 const Skills = () => {
   const [experiences, setExperiences] = useState([]);
   const [skills, setSkills] = useState([]);
+
+  const { t } = useTranslation();
 
   useEffect(() => {
     const query = '*[_type == "experiences"]';
@@ -23,9 +26,10 @@ const Skills = () => {
     });
   }, []);
 
+
   return (
     <>
-      <h2 className="head-text-w">Skills <span>&</span> Experiences</h2>
+      <h2 className="head-text-w">{t('MySkills')} <span>{t('&')}</span> {t('Experiences')}</h2>
 
       <div className="app__skills-container">
         <motion.div className="app__skills-list">
@@ -66,8 +70,8 @@ const Skills = () => {
                       data-for={work.name}
                       key={work.name}
                     >
-                      <h4 className="bold-text">{work.name}</h4>
-                      <p className="p-text-">{work.company}</p>
+                      <h4 className="bold-text">{t(work.name)}</h4>
+                      <p className="p-text-w">{t(work.company)}</p>
                     </motion.div>
                     <ReactTooltip
                       id={work.name}
@@ -75,7 +79,7 @@ const Skills = () => {
                       arrowColor="#fff"
                       className="skills-tooltip"
                     >
-                      {work.desc}
+                      {t(work.desc)}
                     </ReactTooltip>
                   </>
                 ))}
@@ -91,5 +95,5 @@ const Skills = () => {
 export default AppWrap(
   MotionWrap(Skills, 'app__skills'),
   'skills',
-  'app__tertiarybgbg',
+  'app__tertiarybg',
 );

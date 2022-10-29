@@ -6,16 +6,19 @@ import './SocialMedia.scss'
 const SocialMedia = () => (
   <div className="app__social">
     <div>
+    {/* eslint-disable-next-line */}
     <a href="https://www.instagram.com/bvictor__/" target="_blank">
       <BsInstagram />
     </a>
     </div>
     <div>
+      {/* eslint-disable-next-line */}
       <a href="https://github.com/BVictorsk" target="_blank">
         <BsGithub />
       </a>
     </div>
     <div>
+    {/* eslint-disable-next-line */}
       <a href="https://www.linkedin.com/in/brian-victor-d-97970bba/" target="_blank">
         <FaLinkedinIn />
       </a>

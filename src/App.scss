@@ -3,7 +3,7 @@
   font-family: var(--font-base);
 }
 
-.app__tertiarybgbg {
+.app__tertiarybg {
   background-color: var(--tertiary-color);
 }
 
@@ -93,6 +93,16 @@
 
 
 .p-text {
+  font-size: 0.8rem;
+  text-align: left;
+  color: var(--black-color);
+  line-height: 1.5;
+
+  @media screen and (min-width: 2000px) {
+    font-size: 1.75rem;
+  }
+}
+.p-text-w {
   font-size: 0.8rem;
   text-align: left;
   color: var(--white-color);

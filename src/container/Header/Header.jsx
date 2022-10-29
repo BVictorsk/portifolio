@@ -35,14 +35,17 @@ const Header = () => {
         <div className="app__header-badge">
           <div className="badge-cmp app__flex">
             <div style={{ marginLeft: 20 }}>
-              <p className="p-text"> {t('Hello')} </p>
-              <h1 className="head-text">Brian Victor</h1>
+              <p className="p-text"> {t('welcome')} {t('portfolio')}</p>
+              <h2>{t('MyName')}</h2>
+              <p className="p-text">{t('portfolio2')}</p>
             </div>
           </div>
 
-          <div className="tag-cmp app__flex">
-            <p className="p-text">Web Developer</p>
-            <p className="p-text">Freelancer</p>
+          <div className="tag1-cmp app__flex">
+            <p className="p-text">{t('dev')}</p>
+          </div>
+          <div className="tag2-cmp app__flex">
+            <p className="p-text">{t('About')}</p>
           </div>
         </div>
       </motion.div>

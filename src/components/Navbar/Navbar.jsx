@@ -17,9 +17,12 @@ const Navbar = () => {
     <nav className="app__navbar">
 
       <div className="app__navbar-logo">
-        <img src={images.logo} alt="logo" />
+        <a href="/"><img src={images.logo} alt="logo" /></a>
       </div>
       <ul className="app__navbar-links">
+        <li className="app__flex p-text">
+          <a href="#home">{t('about')}</a>
+        </li>
         <li className="app__flex p-text">
           <a href="#skills">{t('skills')}</a>
         </li>
@@ -43,21 +46,19 @@ const Navbar = () => {
             transition={{ duration: 0.85, ease: 'easeOut' }}
           >
             <HiX onClick={() => setToggle(false)} />
-            <ul>
-              {['skills', 'work', 'contact'].map((item) => (
-                <li key={item}>
-                  <a href={`#${item}`} onClick={() => setToggle(false)}>
-                    {item}
-                  </a>
-                </li>
-              ))}
-              {['skills', 'trabalhos', 'contact'].map((item) => (
-                <li key={item}>
-                  <a href={`#${item}`} onClick={() => setToggle(false)}>
-                    {item}
-                  </a>
-                </li>
-              ))}
+            <ul className="app__navbar-links">
+              <li className="app__flex p-text">
+                <a href="#home">{t('about')}</a>
+              </li>
+              <li className="app__flex p-text">
+                <a href="#skills">{t('skills')}</a>
+              </li>
+              <li className="app__flex p-text">
+                <a href="#work">{t('work')}</a>
+              </li>
+              <li className="app__flex p-text">
+                <a href="#contact">{t('contact')}</a>
+              </li>
             </ul>
           </motion.div>
         )}
