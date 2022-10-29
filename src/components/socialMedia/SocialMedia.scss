@@ -1,0 +1,14 @@
+.app__social{
+    height: 95%;
+    position: fixed;
+
+    z-index: 1;
+
+    > div {
+        > a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

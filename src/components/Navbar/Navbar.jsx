@@ -13,22 +13,24 @@ const Navbar = () => {
 
   const { t } = useTranslation();
 
-  const skills = t('skills');
-  const work = t('work');
-  const contact = t('contact');
-
   return (
     <nav className="app__navbar">
+
       <div className="app__navbar-logo">
         <img src={images.logo} alt="logo" />
       </div>
       <ul className="app__navbar-links">
-        {[skills, work, contact].map((item) => (
-          <li className="app__flex p-text" key={`link-${item}`}>
-            <a href={`#${item}`}>{item}</a>
-          </li>
-        ))}
+        <li className="app__flex p-text">
+          <a href="#skills">{t('skills')}</a>
+        </li>
+        <li className="app__flex p-text">
+          <a href="#work">{t('work')}</a>
+        </li>
+        <li className="app__flex p-text">
+          <a href="#contact">{t('contact')}</a>
+        </li>
       </ul>
+
 
       <LngSwitcher />
 
@@ -43,6 +45,13 @@ const Navbar = () => {
             <HiX onClick={() => setToggle(false)} />
             <ul>
               {['skills', 'work', 'contact'].map((item) => (
+                <li key={item}>
+                  <a href={`#${item}`} onClick={() => setToggle(false)}>
+                    {item}
+                  </a>
+                </li>
+              ))}
+              {['skills', 'trabalhos', 'contact'].map((item) => (
                 <li key={item}>
                   <a href={`#${item}`} onClick={() => setToggle(false)}>
                     {item}

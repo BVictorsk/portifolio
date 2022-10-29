@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
-import { AppWrap, MotionWrap  } from '../../wrapper';
-import { urlFor, client } from '../../client';
-import ReactToolTip from 'react-tooltip'
-import './Skills.scss'
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import ReactTooltip from 'react-tooltip';
 
+import { AppWrap, MotionWrap } from '../../wrapper';
+import { urlFor, client } from '../../client';
+import './Skills.scss';
 
 const Skills = () => {
   const [experiences, setExperiences] = useState([]);
@@ -25,11 +25,11 @@ const Skills = () => {
 
   return (
     <>
-      <h2 className="head-text">Skills & Experiences</h2>
+      <h2 className="head-text-w">Skills <span>&</span> Experiences</h2>
 
       <div className="app__skills-container">
         <motion.div className="app__skills-list">
-          {skills?.map((skill) => (
+          {skills.map((skill) => (
             <motion.div
               whileInView={{ opacity: [0, 1] }}
               transition={{ duration: 0.5 }}
@@ -42,12 +42,12 @@ const Skills = () => {
               >
                 <img src={urlFor(skill.icon)} alt={skill.name} />
               </div>
-              <p className="p-text">{skill.name}</p>
+              <p className="p-text-w">{skill.name}</p>
             </motion.div>
           ))}
         </motion.div>
         <div className="app__skills-exp">
-          {experiences?.map((experience) => (
+          {experiences.map((experience) => (
             <motion.div
               className="app__skills-exp-item"
               key={experience.year}
@@ -67,16 +67,16 @@ const Skills = () => {
                       key={work.name}
                     >
                       <h4 className="bold-text">{work.name}</h4>
-                      <p className="p-text">{work.company}</p>
+                      <p className="p-text-">{work.company}</p>
                     </motion.div>
-                    <ReactToolTip
+                    <ReactTooltip
                       id={work.name}
                       effect="solid"
                       arrowColor="#fff"
                       className="skills-tooltip"
                     >
                       {work.desc}
-                    </ReactToolTip >
+                    </ReactTooltip>
                   </>
                 ))}
               </motion.div>
@@ -91,4 +91,5 @@ const Skills = () => {
 export default AppWrap(
   MotionWrap(Skills, 'app__skills'),
   'skills',
+  'app__tertiarybgbg',
 );

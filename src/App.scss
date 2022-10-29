@@ -3,8 +3,8 @@
   font-family: var(--font-base);
 }
 
-.app__whitebg {
-  background-color: var(--white-color);
+.app__tertiarybgbg {
+  background-color: var(--tertiary-color);
 }
 
 .app__primarybg {
@@ -58,6 +58,25 @@
   color: var(--black-color);
   text-transform: capitalize;
 
+  span {
+    color: var(--secondary-color);
+  }
+
+  @media screen and (min-width: 2000px) {
+    font-size: 4rem;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 2rem;
+  }
+}
+
+.head-text-w {
+  font-size: 2.75rem;
+  font-weight: 800;
+  text-align: center;
+  color: var(--white-color);
+  text-transform: capitalize;
 
   span {
     color: var(--secondary-color);
@@ -125,7 +144,7 @@
     border-radius: 50%;
     background-color: var(--white-color);
     margin: 0.25rem 0;
-    border: 1px solid var(--lightGray-color);
+    border: 1px solid var(--tertiary-color);
 
     display: flex;
     justify-content: center;
@@ -136,7 +155,7 @@
     svg {
       width: 15px;
       height: 15px;
-      color: var(--gray-color);
+      color: var(--tertiary-color);
     }
 
     &:hover {
@@ -174,7 +193,7 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #cbcbcb;
+    background-color: var(--tertiaryLight-color);
     margin: 0.5rem;
 
     transition: background-color 0.2s ease-in-out;

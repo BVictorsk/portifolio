@@ -1,0 +1,32 @@
+.language-switcher{
+    display: flex;
+
+    .LngSwitcher {
+        background: none;
+        border: none;
+        color: var(--secondary-color);
+
+        text-transform: uppercase;
+        font-weight: bold;
+
+        margin: 0 .35rem;
+        cursor: pointer;
+
+        &:hover {
+            color: var(--secondaryLight-color);
+            text-shadow: 1px 1px var(--secondary-color);
+        }
+    }
+
+
+    > p {
+        color: var(--secondary-color);
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    > svg{
+        color: var(--secondary-color);
+    }
+}

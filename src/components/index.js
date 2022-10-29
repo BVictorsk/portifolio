@@ -1,5 +1,5 @@
 import NavigationDots from './NavigationDots';
-import SocialMedia from './SocialMedia';
+import SocialMedia from './socialMedia/SocialMedia';
 import Navbar from './Navbar/Navbar';
 
 export {

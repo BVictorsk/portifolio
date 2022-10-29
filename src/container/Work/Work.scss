@@ -18,8 +18,8 @@
   .app__work-filter-item {
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
-    background-color: var(--fifth-color);
-    color: var(--secondary-color);
+    background-color: var(--primaryLight-color);
+    color: var(--secondaryLight-color);
     font-weight: 800;
 
     cursor: pointer;
@@ -57,7 +57,7 @@
     margin: 2rem;
     padding: 1rem;
     border-radius: 0.5rem;
-    background-color: var(--fifth-color);
+    background-color: var(--tertiary-color);
     color: var(--secondary-color);
 
     cursor: pointer;
@@ -65,7 +65,7 @@
     
 
     &:hover {
-      box-shadow: 0 0 25px var(--sixth-color);
+      box-shadow: 0 0 25px var(--tertiary-color);
     }
 
     @media screen and (min-width: 2000px) {

@@ -110,14 +110,13 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
-
+    box-shadow: 0 0 10px var(--secondaryLight-color);
     background: var(--primaryLight-color);
-    animation: mymove 10s infinite;
+    animation: mymove 15s infinite;
 
   
     @keyframes mymove {
-      80% {  box-shadow:0 0 10px var(--secondary-color); }
-      10% {  box-shadow:0 0 10px var(--secondaryLight-color); }
+      70% {  box-shadow: 0 0 15px var(--secondary-color); }
     }
 
     img {

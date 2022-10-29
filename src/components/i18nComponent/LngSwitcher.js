@@ -1,34 +1,54 @@
-import React from 'react'
 import { useTranslation } from "react-i18next";
+import { FaGlobe } from "react-icons/fa";
+import React from 'react'
 import './LngSwitcher.scss';
 
 
-const lngOptions = [
+const enLng = [
     { 
         name: "En",
         value: "en",
-    },
+    }
+]
+
+const ptLng = [
     { 
         name: "Pt-Br",
         value: "ptBr",
-    },
+    }
 ]
+
 
 export const LngSwitcher = () => {
     const { i18n } = useTranslation();
+
+
   return (
     <div className="language-switcher">
-        {lngOptions.map(lngOption => (
+        {enLng.map(enLng => (
             <button
-            type="radio"
-            className="LngSwitcher dropdown"
-            key={lngOption.value}
+            type="button"
+            className="LngSwitcher"
+            key={enLng.value}
             onClick={() => {
-                i18n.changeLanguage(lngOption.value)
+                i18n.changeLanguage(enLng.value)
             }}>
-                {lngOption.name}
+                {enLng.name}
             </button>
         ))}
+        <p> | </p>
+        {ptLng.map(ptLng => (
+            <button
+            type="button"
+            className="LngSwitcher"
+            key={ptLng.value}
+            onClick={() => {
+                i18n.changeLanguage(ptLng.value)
+            }}>
+                {ptLng.name}
+            </button>
+        ))}
+        <FaGlobe />
     </div>
   )
 }
