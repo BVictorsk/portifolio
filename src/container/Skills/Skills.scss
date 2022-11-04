@@ -39,7 +39,7 @@
   
     margin: 1rem;
   
-    transition: all 1.0s ease-in-out;
+    transition: all .6s ease-in-out;
   
     div {
       width: 90px;
@@ -47,15 +47,17 @@
       border-radius: 50%;
       background-color: var(--primaryLight-color);
       box-shadow: 0 0 13px var(--secondary-color);
+
+      transition: all 0.3s ease-in-out;
   
       img {
-        width: 50%;
-        height: 50%;
+        width: 55%;
+        height: 55%;
       }
   
       &:hover {
-        box-shadow: 0 0 13px var(--secondaryLight-color);
-        padding: 5px;
+        box-shadow: 0 0 20px var(--secondaryLight-color);
+        padding: 9px;
       }
   
       @media screen and (min-width: 2000px) {
@@ -120,7 +122,7 @@
       }
   
       p {
-        font-weight: 400;
+        font-weight: bold;
         color: var(--secondaryLight-color);
         margin-top: 5px;
       }
@@ -142,11 +144,11 @@
   
   .skills-tooltip {
     max-width: 300px !important;
-    background-color: var(--tertiaryLight-color) !important;
+    background-color: var(--secondary-color) !important;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.1) !important;
     border-radius: 5px !important;
     padding: 1rem !important;
-    color: var(--black-color) !important;
+    color: var(--white-color) !important;
     text-align: center !important;
     line-height: 1.5 !important;
     opacity: 1 !important;

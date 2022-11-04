@@ -4,13 +4,15 @@
     .LngSwitcher {
         background: none;
         border: none;
-        color: var(--secondary-color);
+        color: var(--white-color);
 
         text-transform: uppercase;
         font-weight: bold;
 
         margin: 0 .35rem;
         cursor: pointer;
+
+        transition: all 0.3s ease-in-out;
 
         &:hover {
             color: var(--secondaryLight-color);
@@ -20,13 +22,13 @@
 
 
     > p {
-        color: var(--secondary-color);
+        color: var(--white-color);
         text-transform: uppercase;
         font-weight: bold;
         font-size: 12px;
     }
 
     > svg{
-        color: var(--secondary-color);
+        color: var(--white-color);
     }
 }

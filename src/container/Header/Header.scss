@@ -37,7 +37,7 @@
   flex: 0.65;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   height: 100%;
 
@@ -52,7 +52,7 @@
 .app__header-badge {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: flex-end;
   flex-direction: column;
 
@@ -74,7 +74,7 @@
 
   .tag1-cmp,
   .tag2-cmp  {
-    padding: 1rem 1rem;
+    padding: .7rem 1rem;
     background: var(--white-color);
     border-radius: 15px;
     flex-direction: row;
@@ -82,8 +82,8 @@
 
   .tag1-cmp {
     flex-direction: column;
-    margin-top: 1rem;
-    width: 80%;
+    margin-top: .8rem;
+    width: 69%;
 
     p {
       width: 100%;
@@ -137,11 +137,18 @@
     border-radius: 50%;
     box-shadow: 0 0 10px var(--secondaryLight-color);
     background: var(--primaryLight-color);
-    animation: mymove 15s infinite;
+    animation: mymove 10s infinite;
 
+    transition: all 0.3s ease-in-out;
   
     @keyframes mymove {
-      70% {  box-shadow: 0 0 15px var(--secondary-color); }
+      60% {  box-shadow: 0 0 15px var(--secondary-color); }
+      10% {  box-shadow: 0 0 20px var(--secondaryLight-color); }
+    }    
+
+    &:hover{
+      padding: 8px;
+      box-shadow: 0 0 25px var(--secondary-color);
     }
 
     img {
@@ -149,10 +156,6 @@
       height: 50%;
       border-radius: 50%;
 
-      &:hover {
-        width: 60%;
-        height: 60%;
-      }
     }
   }
 
@@ -205,15 +208,15 @@
 
 .app__header-img {
   flex: 1;
-  height: 100%;
+  height: 90%;
 
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   position: relative;
 
   img {
-    width: 100%;
+    width: 80%;
     object-fit: contain;
     z-index: 1;
     border-radius: 50%;
@@ -221,6 +224,6 @@
 
 
   @media screen and (max-width: 1200px) {
-    margin: 2rem 0;
+    margin: 2rem 0;           
   }
 }

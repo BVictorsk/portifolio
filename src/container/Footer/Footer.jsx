@@ -50,7 +50,7 @@ const Footer = () => {
           href="https://documentcloud.wondershare.com/clientShare/review/bpcFVoayn8Msp0rtjRcN4d4TEmhBGtE5NJ-SLCRhVxHqMG4UiHbsDxnCwGQjnzYJq5dNDlS7A4-oJrjJTd2_3g"
           target="_blank"
           >
-            <FaFileDownload />
+            <FaFileDownload style={{ marginRight: '5px'}} />
             {t("PortugueseV")}
           </a>
           {/* eslint-disable-next-line */}
@@ -58,7 +58,7 @@ const Footer = () => {
           href="https://documentcloud.wondershare.com/clientShare/review/bpcFVoayn8Msp0rtjRcN4dlmNlBXEypALcNsvS_IeM0-7t7BpppK8tEe2hGuSA8N-NZhyBp5-T19f0_HFWKjKw" 
           target="_blank"
           >
-            <FaFileDownload />
+            <FaFileDownload style={{ marginRight: '5px'}}/>
             {t("EnglishV")}
           </a>
         </div>
