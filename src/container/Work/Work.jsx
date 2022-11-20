@@ -41,7 +41,7 @@ const Work = () => {
 
   return (
     <>
-      <h2 className="head-text-w"> {t('MyCreative')} <span>{t('Portfolio')}</span> {t('Section')}</h2>
+      <h2 className="head-text-w"> {t('My')} <span>{t('Portfolio')}</span></h2>
 
       <div className="app__work-filter">
         {[ 'All', 'React.js','Typescript'].map((item, index) => (

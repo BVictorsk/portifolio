@@ -57,19 +57,16 @@
   flex-direction: column;
 
   .badge-cmp{
-    p{ 
-      text-transform: uppercase;
-      font-weight: 500;
-      color: var(--secondary-color)
-    }
-  }
-
-  .badge-cmp  {
     padding: 1rem 1rem;
     background: var(--white-color);
     border-radius: 15px;
     flex-direction: row;
     width: auto;
+    p{ 
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--secondary-color)
+    }
   }
 
   .tag1-cmp,
