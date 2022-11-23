@@ -15,4 +15,7 @@
 ### <a href="https://www.sanity.io/"> Sanity </a>
 <p> Sanity is the platform for structured content that lets your team work together in real-time to build engaging digital experiences across channels. </p>
 
+### <a href="https://www.framer.com/motion/"> Framer Motion </a>
+<p> Framer Motion is a production-ready React animation and gesture library. </p>
+
 
