@@ -1,4 +1,4 @@
-# 💼 Portifolio
+# 💼 <a href="https://bvictor-portfolio.netlify.app/"> Portifolio </a>
 <p> In this project you will learn about me, my skills, experiences and projects. </p>
 
 ## Core Technologies
@@ -12,7 +12,7 @@
 
 ## Tools used
 
-### Sanity
+### <a href="https://www.sanity.io/"> Sanity </a>
 <p> Sanity is the platform for structured content that lets your team work together in real-time to build engaging digital experiences across channels. </p>
 
 
